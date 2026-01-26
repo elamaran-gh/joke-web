@@ -1,13 +1,19 @@
 import React from 'react'
 
-const JokeCard = () => {
+const JokeCard = ({ joke }) => {
+  if (!joke) {
+    return <p className="text-center mt-5 text-white">click the button to get a joke </p>
+  };
   return (
     <div className="joke-card">
-      <div className=" text-center text-white text-3xl font-bold mt-10">
-          <h1 className="flex justify-center items-center mt-50">Random Joke Generator </h1>
+      <div className="p-8 text-center mt-5 flex justify-center items-center">
+        <span className="bg-white p-6 rounded-lg flex flex-col justify-center items-center">
+        <h2 className="font-bold text-xl mb-4">{joke.setup}</h2>
+        <p>{joke.punchline}</p>
+        </span>
       </div>
-    </div>
+      </div>
   )
-}
+};
 
 export default JokeCard
