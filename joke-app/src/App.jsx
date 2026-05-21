@@ -1,5 +1,5 @@
-import { use, useState } from 'react'
-import JokeCard from './JokeCard'
+import { useState } from 'react'
+import JokeCard from './JokeCard.jsx'
 import Button from './Button.jsx'
 import { fetchJoke } from "./services/jokeApi";
 
